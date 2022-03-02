@@ -31,3 +31,15 @@ export const tweetContextMenuItems: ContextMenuItemModel[] = [
   { iconName: 'ImEmbed2', text: 'Embed Tweet' },
   { iconName: 'BsFlag', text: 'Report Tweet' },
 ]
+
+export const retweetContextMenuItems: ContextMenuItemModel[] = [
+  { iconName: 'AiOutlineRetweet', text: 'Retweet' },
+  { iconName: 'BsPencil', text: 'Quote Tweet' },
+]
+
+export const shareContextMenuItems: ContextMenuItemModel[] = [
+  { iconName: 'FaRegEnvelope', text: 'Send via Direct Message' },
+  { iconName: 'MdOutlineBookmarkAdd', text: 'Bookmarks' },
+  { iconName: 'BsLink45Deg', text: 'Copy link to Tweet' },
+  { iconName: 'BsUpload', text: 'Share Tweet via ...' },
+]

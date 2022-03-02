@@ -9,7 +9,11 @@ import { TweetModel } from '../../../model/TweetModel'
 import { FunctionComponent, useState } from 'react'
 import { Popover } from 'react-tiny-popover'
 import { TCContextMenu } from '../TCContextMenu/TCContextMenu'
-import { tweetContextMenuItems } from '../../../assets/context_menus_data/context_menus_data'
+import {
+  retweetContextMenuItems,
+  shareContextMenuItems,
+  tweetContextMenuItems,
+} from '../../../assets/context_menus_data/context_menus_data'
 
 interface TCTweetProps {
   tweet: TweetModel
@@ -17,6 +21,9 @@ interface TCTweetProps {
 
 export const TCTweet: FunctionComponent<TCTweetProps> = ({ tweet }) => {
   const [isContextMenuOpen, setIsContextMenuOpen] = useState(false)
+  const [isRetweetContextMenuOpen, setIsRetweetContextMenuOpen] =
+    useState(false)
+  const [isShareContextMenuOpen, setIsShareContextMenuOpen] = useState(false)
 
   return (
     <div className='tc-tweet'>
@@ -79,21 +86,49 @@ export const TCTweet: FunctionComponent<TCTweetProps> = ({ tweet }) => {
             {tweet.replyNumber}
           </span>
         </div>
-        <div className='tc-tweet__bottom-icons__icon-wrapper tc-tweet__bottom-icons__icon-and-num-retweet'>
-          <AiOutlineRetweet className='tc-tweet__bottom-icons__icon-and-num-reply__retweet-icon' />
-          <span className='tc-tweet__bottom-icons__icon-wrapper__number'>
-            {tweet.retweetNumber}
-          </span>
-        </div>
+        <Popover
+          isOpen={isRetweetContextMenuOpen}
+          positions={['bottom', 'top']}
+          reposition={true}
+          onClickOutside={() => setIsRetweetContextMenuOpen(false)}
+          align={'end'}
+          padding={-30}
+          content={<TCContextMenu items={retweetContextMenuItems} />}
+        >
+          <div
+            onClick={() =>
+              setIsRetweetContextMenuOpen(!isRetweetContextMenuOpen)
+            }
+            className='tc-tweet__bottom-icons__icon-wrapper tc-tweet__bottom-icons__icon-and-num-retweet'
+          >
+            <AiOutlineRetweet className='tc-tweet__bottom-icons__icon-and-num-reply__retweet-icon' />
+            <span className='tc-tweet__bottom-icons__icon-wrapper__number'>
+              {tweet.retweetNumber}
+            </span>
+          </div>
+        </Popover>
         <div className='tc-tweet__bottom-icons__icon-wrapper tc-tweet__bottom-icons__icon-and-num-like'>
           <AiOutlineHeart className='tc-tweet__bottom-icons__icon-and-num-reply__like-icon' />
           <span className='tc-tweet__bottom-icons__icon-wrapper__number'>
             {tweet.likeNumber}
           </span>
         </div>
-        <div className='tc-tweet__bottom-icons__icon-wrapper-share'>
-          <BsUpload className='tc-tweet__bottom-icons__icon-and-num-reply__share-icon' />
-        </div>
+        <Popover
+          isOpen={isShareContextMenuOpen}
+          positions={['bottom', 'top']}
+          reposition={true}
+          onClickOutside={() => setIsShareContextMenuOpen(false)}
+          align={'end'}
+          padding={-30}
+          content={<TCContextMenu items={shareContextMenuItems} />}
+        >
+          <div
+            onClick={() => setIsShareContextMenuOpen(!isShareContextMenuOpen)}
+            className='tc-tweet__bottom-icons__icon-wrapper-share'
+          >
+            <BsUpload className='tc-tweet__bottom-icons__icon-and-num-reply__share-icon' />
+          </div>
+        </Popover>
       </div>
     </div>
   )

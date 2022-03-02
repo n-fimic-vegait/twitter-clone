@@ -1,3 +1,4 @@
+import AiOutlineRetweet from './../icons/context_menus/AiOutlineRetweet.svg'
 import BiMessageRoundedAdd from './../icons/context_menus/BiMessageRoundedAdd.svg'
 import BiMessageRoundedDetail from './../icons/context_menus/BiMessageRoundedDetail.svg'
 import BiMessageRoundedX from './../icons/context_menus/BiMessageRoundedX.svg'
@@ -5,6 +6,10 @@ import BsArrowUpRightSquare from './../icons/context_menus/BsArrowUpRightSquare.
 import BsEmojiFrown from './../icons/context_menus/BsEmojiFrown.svg'
 import BsFlag from './../icons/context_menus/BsFlag.svg'
 import BsLightning from './../icons/context_menus/BsLightning.svg'
+import BsLink45Deg from './../icons/context_menus/BsLink45Deg.svg'
+import BsPencil from './../icons/context_menus/BsPencil.svg'
+import BsUpload from './../icons/context_menus/BsUpload.svg'
+import FaRegEnvelope from './../icons/context_menus/FaRegEnvelope.svg'
 import HiOutlineUserAdd from './../icons/context_menus/HiOutlineUserAdd.svg'
 import ImEmbed2 from './../icons/context_menus/ImEmbed2.svg'
 import IoHelpCircleOutline from './../icons/context_menus/IoHelpCircleOutline.svg'
@@ -14,6 +19,7 @@ import IoRocketOutline from './../icons/context_menus/IoRocketOutline.svg'
 import IoSettingsOutline from './../icons/context_menus/IoSettingsOutline.svg'
 import IoVolumeMuteOutline from './../icons/context_menus/IoVolumeMuteOutline.svg'
 import MdOutlineBlock from './../icons/context_menus/MdOutlineBlock.svg'
+import MdOutlineBookmarkAdd from './../icons/context_menus/MdOutlineBookmarkAdd.svg'
 import MdOutlineBrush from './../icons/context_menus/MdOutlineBrush.svg'
 import MdOutlineStackedBarChart from './../icons/context_menus/MdOutlineStackedBarChart.svg'
 import home from './../icons/navbar/home.svg'
@@ -33,6 +39,7 @@ import profile_selected from './../icons/navbar/profile_selected.svg'
 import more from './../icons/navbar/more.svg'
 
 export const Icons = {
+  AiOutlineRetweet: AiOutlineRetweet,
   BiMessageRoundedAdd: BiMessageRoundedAdd,
   BiMessageRoundedDetail: BiMessageRoundedDetail,
   BiMessageRoundedX: BiMessageRoundedX,
@@ -40,6 +47,10 @@ export const Icons = {
   BsEmojiFrown: BsEmojiFrown,
   BsFlag: BsFlag,
   BsLightning: BsLightning,
+  BsLink45Deg: BsLink45Deg,
+  BsPencil: BsPencil,
+  BsUpload: BsUpload,
+  FaRegEnvelope: FaRegEnvelope,
   HiOutlineUserAdd: HiOutlineUserAdd,
   ImEmbed2: ImEmbed2,
   IoHelpCircleOutline: IoHelpCircleOutline,
@@ -49,6 +60,7 @@ export const Icons = {
   IoSettingsOutline: IoSettingsOutline,
   IoVolumeMuteOutline: IoVolumeMuteOutline,
   MdOutlineBlock: MdOutlineBlock,
+  MdOutlineBookmarkAdd: MdOutlineBookmarkAdd,
   MdOutlineBrush: MdOutlineBrush,
   MdOutlineStackedBarChart: MdOutlineStackedBarChart,
   home: home,
