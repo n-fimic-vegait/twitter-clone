@@ -1,21 +1,22 @@
 import './TCNavbarItem.scss'
 import { Link } from 'react-router-dom'
-import { NavbarItemModel } from '../../../model/NavbarItemModel'
 import { Icons } from '../../../assets/icons/Icons'
 import { FunctionComponent } from 'react'
 
 interface TCNavbarItemProps {
-  item: NavbarItemModel
+  iconName: string
+  text: string
   onClick: (itemIndex: number) => void
-  selectedItemIndex: number
   index: number
+  isSelected: boolean
 }
 
 export const TCNavbarItem: FunctionComponent<TCNavbarItemProps> = ({
-  item,
+  iconName,
+  text,
   onClick,
-  selectedItemIndex,
   index,
+  isSelected,
 }) => {
   return (
     <Link
@@ -28,24 +29,19 @@ export const TCNavbarItem: FunctionComponent<TCNavbarItemProps> = ({
       <span
         className={
           'tc-navbar-item__content' +
-          (selectedItemIndex === index
-            ? ' tc-navbar-item__content--selected'
-            : '')
+          (isSelected ? ' tc-navbar-item__content--selected' : '')
         }
       >
         <img
           src={
             Icons[
-              (item.iconName +
-                (selectedItemIndex === index
-                  ? '_selected'
-                  : '')) as keyof typeof Icons
+              (iconName + (isSelected ? '_selected' : '')) as keyof typeof Icons
             ]
           }
           className='tc-navbar-item__content__icon'
           alt='navbar_icon'
         />
-        <span className='tc-navbar-item__content__name'> {item.name} </span>
+        <span className='tc-navbar-item__content__name'> {text} </span>
       </span>
     </Link>
   )

@@ -14,16 +14,18 @@ export const TCNavbar: FunctionComponent<TCNavbarProps> = ({ items }) => {
   }
 
   return (
-    <div>
+    <ul>
       {items.map((item, index) => (
-        <TCNavbarItem
-          item={item}
-          index={index}
-          key={index}
-          onClick={handleOnClick}
-          selectedItemIndex={selectedItemIndex}
-        />
+        <li key={index}>
+          <TCNavbarItem
+            isSelected={selectedItemIndex === index ? true : false}
+            iconName={item.iconName}
+            text={item.name}
+            index={index}
+            onClick={handleOnClick}
+          />
+        </li>
       ))}
-    </div>
+    </ul>
   )
 }
