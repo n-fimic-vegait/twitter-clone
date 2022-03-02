@@ -6,13 +6,18 @@ import { BiMessageRounded } from 'react-icons/bi'
 import { AiOutlineRetweet, AiOutlineHeart } from 'react-icons/ai'
 import { BsUpload } from 'react-icons/bs'
 import { TweetModel } from '../../../model/TweetModel'
-import { FunctionComponent } from 'react'
+import { FunctionComponent, useState } from 'react'
+import { Popover } from 'react-tiny-popover'
+import { TCContextMenu } from '../TCContextMenu/TCContextMenu'
+import { tweetContextMenuItems } from '../../../assets/context_menus_data/context_menus_data'
 
 interface TCTweetProps {
   tweet: TweetModel
 }
 
 export const TCTweet: FunctionComponent<TCTweetProps> = ({ tweet }) => {
+  const [isContextMenuOpen, setIsContextMenuOpen] = useState(false)
+
   return (
     <div className='tc-tweet'>
       <div className='tc-tweet__category'>
@@ -45,9 +50,22 @@ export const TCTweet: FunctionComponent<TCTweetProps> = ({ tweet }) => {
                 {tweet.time}h
               </span>
             </div>
-            <div>
-              <HiDotsHorizontal className='tc-tweet__data-user-data__options-icon' />
-            </div>
+            <Popover
+              isOpen={isContextMenuOpen}
+              positions={['bottom', 'top']}
+              reposition={true}
+              onClickOutside={() => setIsContextMenuOpen(false)}
+              align={'end'}
+              padding={-25}
+              content={<TCContextMenu items={tweetContextMenuItems} />}
+            >
+              <div>
+                <HiDotsHorizontal
+                  className='tc-tweet__data-user-data__options-icon'
+                  onClick={() => setIsContextMenuOpen(!isContextMenuOpen)}
+                />
+              </div>
+            </Popover>
           </div>
           <div className='tc-tweet__data__user-data-and-tweet-text__tweet-text'>
             <p>{tweet.content}</p>
