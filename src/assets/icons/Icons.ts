@@ -1,3 +1,4 @@
+import AiOutlineRetweet from './../icons/context_menus/AiOutlineRetweet.svg'
 import BiMessageRoundedAdd from './../icons/context_menus/BiMessageRoundedAdd.svg'
 import BiMessageRoundedDetail from './../icons/context_menus/BiMessageRoundedDetail.svg'
 import BiMessageRoundedX from './../icons/context_menus/BiMessageRoundedX.svg'
@@ -5,6 +6,7 @@ import BsArrowUpRightSquare from './../icons/context_menus/BsArrowUpRightSquare.
 import BsEmojiFrown from './../icons/context_menus/BsEmojiFrown.svg'
 import BsFlag from './../icons/context_menus/BsFlag.svg'
 import BsLightning from './../icons/context_menus/BsLightning.svg'
+import BsPencil from './../icons/context_menus/BsPencil.svg'
 import HiOutlineUserAdd from './../icons/context_menus/HiOutlineUserAdd.svg'
 import ImEmbed2 from './../icons/context_menus/ImEmbed2.svg'
 import IoHelpCircleOutline from './../icons/context_menus/IoHelpCircleOutline.svg'
@@ -33,6 +35,7 @@ import profile_selected from './../icons/navbar/profile_selected.svg'
 import more from './../icons/navbar/more.svg'
 
 export const Icons = {
+  AiOutlineRetweet: AiOutlineRetweet,
   BiMessageRoundedAdd: BiMessageRoundedAdd,
   BiMessageRoundedDetail: BiMessageRoundedDetail,
   BiMessageRoundedX: BiMessageRoundedX,
@@ -40,6 +43,7 @@ export const Icons = {
   BsEmojiFrown: BsEmojiFrown,
   BsFlag: BsFlag,
   BsLightning: BsLightning,
+  BsPencil: BsPencil,
   HiOutlineUserAdd: HiOutlineUserAdd,
   ImEmbed2: ImEmbed2,
   IoHelpCircleOutline: IoHelpCircleOutline,

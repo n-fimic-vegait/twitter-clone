@@ -31,3 +31,8 @@ export const tweetContextMenuItems: ContextMenuItemModel[] = [
   { iconName: 'ImEmbed2', text: 'Embed Tweet' },
   { iconName: 'BsFlag', text: 'Report Tweet' },
 ]
+
+export const retweetContextMenuItems: ContextMenuItemModel[] = [
+  { iconName: 'AiOutlineRetweet', text: 'Retweet' },
+  { iconName: 'BsPencil', text: 'Quote Tweet' },
+]
