@@ -1,0 +1,39 @@
+@import './../../../assets/styles/_variables.scss';
+
+.tc-navbar-item {
+  display: block;
+  text-decoration: none;
+  padding: $spacing-4 0;
+}
+
+.tc-navbar-item:hover {
+  cursor: pointer;
+}
+
+.tc-navbar-item__content {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-light;
+  border-radius: $radius-32;
+  transition: 0.3s;
+}
+
+.tc-navbar-item__content--selected {
+  font-weight: bold;
+}
+
+.tc-navbar-item:hover .tc-navbar-item__content {
+  background-color: $gray-300;
+}
+
+.tc-navbar-item__content__icon {
+  width: 30px;
+  height: 30px;
+}
+
+.tc-navbar-item__content__name {
+  margin: 0 $spacing-16;
+}

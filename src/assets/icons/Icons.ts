@@ -16,6 +16,21 @@ import IoVolumeMuteOutline from './../icons/context_menus/IoVolumeMuteOutline.sv
 import MdOutlineBlock from './../icons/context_menus/MdOutlineBlock.svg'
 import MdOutlineBrush from './../icons/context_menus/MdOutlineBrush.svg'
 import MdOutlineStackedBarChart from './../icons/context_menus/MdOutlineStackedBarChart.svg'
+import home from './../icons/navbar/home.svg'
+import home_selected from './../icons/navbar/home_selected.svg'
+import explore from './../icons/navbar/explore.svg'
+import explore_selected from './../icons/navbar/explore_selected.svg'
+import notifications from './../icons/navbar/notifications.svg'
+import notifications_selected from './../icons/navbar/notifications_selected.svg'
+import messages from './../icons/navbar/messages.svg'
+import messages_selected from './../icons/navbar/messages_selected.svg'
+import bookmarks from './../icons/navbar/bookmarks.svg'
+import bookmarks_selected from './../icons/navbar/bookmarks_selected.svg'
+import lists from './../icons/navbar/lists.svg'
+import lists_selected from './../icons/navbar/lists_selected.svg'
+import profile from './../icons/navbar/profile.svg'
+import profile_selected from './../icons/navbar/profile_selected.svg'
+import more from './../icons/navbar/more.svg'
 
 export const Icons = {
   BiMessageRoundedAdd: BiMessageRoundedAdd,
@@ -36,4 +51,19 @@ export const Icons = {
   MdOutlineBlock: MdOutlineBlock,
   MdOutlineBrush: MdOutlineBrush,
   MdOutlineStackedBarChart: MdOutlineStackedBarChart,
+  home: home,
+  home_selected: home_selected,
+  explore: explore,
+  explore_selected: explore_selected,
+  notifications: notifications,
+  notifications_selected: notifications_selected,
+  messages: messages,
+  messages_selected: messages_selected,
+  bookmarks: bookmarks,
+  bookmarks_selected: bookmarks_selected,
+  lists: lists,
+  lists_selected: lists_selected,
+  profile: profile,
+  profile_selected: profile_selected,
+  more: more,
 }
