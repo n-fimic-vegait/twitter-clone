@@ -11,6 +11,7 @@ import { Popover } from 'react-tiny-popover'
 import { TCContextMenu } from '../TCContextMenu/TCContextMenu'
 import {
   retweetContextMenuItems,
+  shareContextMenuItems,
   tweetContextMenuItems,
 } from '../../../assets/context_menus_data/context_menus_data'
 
@@ -22,6 +23,7 @@ export const TCTweet: FunctionComponent<TCTweetProps> = ({ tweet }) => {
   const [isContextMenuOpen, setIsContextMenuOpen] = useState(false)
   const [isRetweetContextMenuOpen, setIsRetweetContextMenuOpen] =
     useState(false)
+  const [isShareContextMenuOpen, setIsShareContextMenuOpen] = useState(false)
 
   return (
     <div className='tc-tweet'>
@@ -111,9 +113,22 @@ export const TCTweet: FunctionComponent<TCTweetProps> = ({ tweet }) => {
             {tweet.likeNumber}
           </span>
         </div>
-        <div className='tc-tweet__bottom-icons__icon-wrapper-share'>
-          <BsUpload className='tc-tweet__bottom-icons__icon-and-num-reply__share-icon' />
-        </div>
+        <Popover
+          isOpen={isShareContextMenuOpen}
+          positions={['bottom', 'top']}
+          reposition={true}
+          onClickOutside={() => setIsShareContextMenuOpen(false)}
+          align={'end'}
+          padding={-30}
+          content={<TCContextMenu items={shareContextMenuItems} />}
+        >
+          <div
+            onClick={() => setIsShareContextMenuOpen(!isShareContextMenuOpen)}
+            className='tc-tweet__bottom-icons__icon-wrapper-share'
+          >
+            <BsUpload className='tc-tweet__bottom-icons__icon-and-num-reply__share-icon' />
+          </div>
+        </Popover>
       </div>
     </div>
   )
